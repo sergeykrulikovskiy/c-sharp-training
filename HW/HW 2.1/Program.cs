@@ -8,8 +8,8 @@
             int num1 = 10;
             int num2 = 5;
             
-            Console.WriteLine("{0}+{1} = {2}", num1, num2,num1 + num2);
-            Console.WriteLine("{0}/{1} = {2}", num1, num2, num1 / num2);
+            Console.WriteLine($"{num1}+{num2} = {num1 + num2}");
+            Console.WriteLine($"{num1}/{num2} = {num1 / num2}");
             
             Console.WriteLine("****************** PART2 ******************");
             // мені було ліньки створювати купу змінних :)
@@ -42,7 +42,7 @@
             Console.Write("Number 3 :");
             numberThree = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("{0} * {1} * {2} = {3}", numberOne, numberTwo, numberThree, numberOne * numberTwo * numberThree);
+            Console.WriteLine($"{numberOne} * {numberTwo} * {numberThree} = {numberOne * numberTwo * numberThree}");
         }
     }
 }
