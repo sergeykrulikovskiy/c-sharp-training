@@ -6,10 +6,10 @@
         {
             // Write a C# program to check two given integers
             // and return true if one is negative and one is positive.
-            int numberOne = -5;
-            int numberTwo = 10;
+            int numberOne = 5;
+            int numberTwo = 5;
 
-            if ((numberOne > 0 & numberTwo > 0) || (numberOne < 0 & numberTwo < 0))
+            if ((numberOne > 0 && numberTwo > 0) || (numberOne < 0 && numberTwo < 0))
                 Console.WriteLine("FALSE - both are negative or positive");
             else
                 Console.WriteLine("TRUE - one is negative and one is positive");
