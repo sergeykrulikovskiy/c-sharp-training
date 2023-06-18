@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HW6
+namespace HW8
 {
     internal abstract class Monkey
     {

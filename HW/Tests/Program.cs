@@ -1,43 +1,43 @@
 ﻿using System;
+using System.Runtime.Intrinsics.X86;
+using System.Xml.Linq;
+
 namespace Tests
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Test tst1 = new Test(2,3);
-            Test tst2 = new Test(2,3);
-            Test tst3 = new Test();
+            List<State> states = new List<State>()
+            {
+               new  State{  SID=1,SName="Telangana",SCode="+91",SAbbrevation="TG"},
+               new  State{  SID=2,SName="Texas",SCode="512",SAbbrevation="TS"},
+            };
 
-            tst3 = tst1 * tst2;
-            tst3.Print();
-            
+            List<Country> coutries = new List<Country>()
+            {
+               new Country{CID=1,CName="India",CAbbrevation="IND"},
+               new Country{CID=2,CName="US of America",CAbbrevation="USA"},
+            };
+
+            var res = coutries.Join(states, a => a.CID, b => b.SID, (a, b) => new { a.CName, b.SName }).ToList();
         }
     }
-
-    public class Test
+    public class State
     {
-        private int a;
-        private int b;
-
-        public  Test(){}
-        public Test(int a, int b) 
-        {
-            this.a = a;
-            this.b = b; 
-        }
-
-        public void Print()
-        {
-            Console.WriteLine($"{this.a}");
-            Console.WriteLine($"{this.b}");
-        }
-        public static Test operator* (Test a, Test b) {
-            Test tst = new Test();
-            tst.a = a.a * b.a;
-            tst.b= a.b * b.b;
-            
-            return tst;
-        }
+        public int SID { get; set; }
+        public string SName { get; set; }
+        public string SCode { get; set; }
+        public string SAbbrevation { get; set; }
     }
+
+    public class Country
+    {
+        public int CID { get; set; }
+        public string CName { get; set; }
+        public string CAbbrevation { get; set; }
+    }
+
+
+   
 }
