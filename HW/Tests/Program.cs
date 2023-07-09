@@ -8,36 +8,38 @@ namespace Tests
     {
         static void Main(string[] args)
         {
-            List<State> states = new List<State>()
+            IList<Person> people = new List<Person>
             {
-               new  State{  SID=1,SName="Telangana",SCode="+91",SAbbrevation="TG"},
-               new  State{  SID=2,SName="Texas",SCode="512",SAbbrevation="TS"},
+                new Person ("Tom",23),
+                new Person ("Bob",27),
+                new Person ("Sam",29),
+                new Person ("Alice",24)
             };
 
-            List<Country> coutries = new List<Country>()
-            {
-               new Country{CID=1,CName="India",CAbbrevation="IND"},
-               new Country{CID=2,CName="US of America",CAbbrevation="USA"},
-            };
+            //var names = people.Select(u => u.Name);
+            //foreach (string n in names)
+            //    Console.WriteLine(n);
 
-            var res = coutries.Join(states, a => a.CID, b => b.SID, (a, b) => new { a.CName, b.SName }).ToList();
+            //IEnumerable<Person> names1 = people.Where(a => a.Age > 25);
+            //Console.WriteLine(names1.GetType());
+            //foreach (Person nn in names1)
+            //    Console.WriteLine(nn.Name);
+
+
         }
     }
-    public class State
+
+    public class Person
     {
-        public int SID { get; set; }
-        public string SName { get; set; }
-        public string SCode { get; set; }
-        public string SAbbrevation { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public Person(string name, int age)
+        {
+            this.Name = name;
+            this.Age = age;
+        }
+        public Person() { }
     }
-
-    public class Country
-    {
-        public int CID { get; set; }
-        public string CName { get; set; }
-        public string CAbbrevation { get; set; }
-    }
-
-
-   
-}
+    
+   }
