@@ -2,11 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Dynamic;
 
-namespace PizzaProject.Controllers
+namespace PizzaProject
 {
-    using Models;
-    using Services;
-    using Interfaces;
     using Microsoft.AspNetCore.Http.HttpResults;
 
     [ApiController]
@@ -24,6 +21,7 @@ namespace PizzaProject.Controllers
         public IActionResult Get(string id)
         {
             var result = new PizzaService().GetPizza(id);
+
             if (result == null)
                 return NotFound($"Pizza with ID:{id} not found.");
             

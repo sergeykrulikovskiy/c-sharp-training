@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 
-namespace PizzaProject.Models
+namespace PizzaProject
 {
     public class Toppings
     {

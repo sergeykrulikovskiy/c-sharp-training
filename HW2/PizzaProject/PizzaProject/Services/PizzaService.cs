@@ -1,7 +1,5 @@
-﻿namespace PizzaProject.Services
+﻿namespace PizzaProject
 {
-    using Interfaces;
-    using PizzaProject.Models;
     using System.Collections.Generic;
     using System.Drawing;
     using System.Xml.Linq;

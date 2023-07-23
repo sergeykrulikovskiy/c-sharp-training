@@ -1,7 +1,5 @@
-﻿namespace PizzaProject.Interfaces
+﻿namespace PizzaProject
 {
-    using Models;
-
     public interface IPizzaService
     {
         Pizza CreatePizza(Pizza pizza);

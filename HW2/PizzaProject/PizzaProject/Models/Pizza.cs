@@ -1,6 +1,6 @@
 ﻿using System.Dynamic;
 
-namespace PizzaProject.Models
+namespace PizzaProject
 {
     public class Pizza
     {
