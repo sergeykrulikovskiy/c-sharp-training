@@ -1,0 +1,66 @@
+﻿@page
+@model WebAppRazor.Pages.ManagementCarsModel
+@{
+	ViewData["Title"] = "ManagementCars Demo";
+}
+<div>
+	<div class="container">
+		<div class="about-carsinfo-common about-carsinfo">
+			<h2>Engnies:</h2>
+				<ul>
+				@foreach (var engine in Model.Engines)
+				{
+						<li>@engine</li>
+				}
+				</ul>
+		</div>
+		<div class="about-carsinfo-common about-carsinfo">
+		<h2>Vendors:</h2>
+				<ul>
+				@foreach (var engine in Model.Vendors)
+				{
+						<li>@engine</li>
+				}
+				</ul>
+		</div>
+		<div class="about-carsinfo-common about-carsinfo-form">
+			<form>
+			<fieldset>
+			  <legend><h2>Search by:</h2></legend>
+			  <div class="about-carsinfo-form-input">
+				<label for="Vendor">Vendor Name:</label>
+				<select asp-for="Vendor" asp-items="@Model.VendorsListForDropdown"></select>
+			  </div>
+			  <div class="about-carsinfo-form-input">
+				<label for="Engine">Engine Name:</label>
+				<input type="text" name="Engine" value="" class="about-carsinfo-form-input-box" />
+			  </div>
+			  
+			  <div class="about-carsinfo-form-Submit">
+				<input type="submit" value="Submit" />
+			  </div>
+			</fieldset>
+		  </form>
+		</div>
+	</div>
+	<div class="footer">
+		<div>
+			@{
+				if (Model.carListResult !=null && Model.carListResult.Count != 0)
+				{
+					<div><h4>Search results for: @Model.Vendor @Model.Engine</h4></div>
+					@:<ul>
+					foreach (var car in Model.carListResult)
+					{
+						<li>Name=@car.Name, Engine=@car.Engine, Age=@car.Age</li>
+					}
+					@:</ul>
+				}
+				else
+				{
+					<p>No search results</p>
+				}
+			}
+		</div>
+	</div>
+</div>

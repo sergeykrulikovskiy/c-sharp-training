@@ -1,0 +1,12 @@
+﻿@page
+@model WebAppRazor.Pages.HobbiesModel
+@{
+	foreach (var hobby in Model.HobbiesList)
+	{
+		<div style="display:flex">
+			<div style="color:red">@hobby.Name</div>
+			<div> - </div>
+			<div style="color:green">@hobby.Description</div>
+		</div>
+	}
+}

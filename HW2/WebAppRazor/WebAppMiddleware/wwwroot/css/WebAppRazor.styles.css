@@ -1,0 +1,49 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    padding: 20px;
+}
+
+.about-carsinfo-common {
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.about-carsinfo {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-carsinfo-form {
+    flex: 1;
+}
+
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.about-carsinfo-form-input {
+    margin-top: 20px;
+}
+.about-carsinfo-form-input-box {
+    float:right;
+}
+
+.about-carsinfo-form-Submit{
+    margin: 20px auto auto auto;
+    float:right;
+}
+
+.layout-header-borderleft {
+    border-left: 1px solid #000;
+}
