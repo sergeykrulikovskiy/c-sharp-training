@@ -1,0 +1,75 @@
+﻿.hw-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-image: url("imgs/background.jpg");
+}
+
+.hw-common {
+    /*border: 1px solid red;*/
+    margin: 10px 10px 10px 10px;
+}
+
+.hw-links-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hw-link {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid #000;*/
+    padding: 10px;
+    background-color: white;
+    border-radius: 15%;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+.hw-link-content {
+    text-align: center;
+}
+
+.hw-link-content-text{
+    color: black;
+    text-transform: uppercase;
+}
+
+.hw-buttons {
+    display: flex;
+    justify-content: center;
+}
+.hw-button-aboutus, .hw-button-ourworks {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: white;
+}
+}
+
+img {
+    max-width: 64px;
+    max-height: 64px;
+    margin-bottom: 10px;
+}
+
+.hw-description{
+    width:70vh;
+    color: white;
+    text-align:center;
+}
+
+.hw-title{
+    color:white;
+    font-weight: 700;
+    font-size: 2.5em;
+    font-family: 'Cascadia Code';
+}
